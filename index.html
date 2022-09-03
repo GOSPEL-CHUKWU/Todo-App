@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>TO-DO APP</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">To-Do App</h1>
+      <p class="question">What do you need to do?</p>
+    </div>
+    <form>
+      <div class="add-to-do">
+        <div class="input-area">
+          <input type="text" name="text" class="text" placeholder="New Todo" />
+          <button class="sub-btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="error-msg hidden">
+            <i class="fa-solid fa-circle-exclamation"></i> Add A To-do First
+          </div>
+        </div>
+        <button class="info-btn">
+          <i class="fa-solid fa-question"></i>
+        </button>
+        <button class="clear-btn">
+          <i class="fa-solid fa-trash-arrow-up"></i>
+        </button>
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h1>Start Planning Your Day! 🌙</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+            fuga aut beatae, rerum culpa tenetur impedit nemo aliquam corporis
+            error, praesentium, ratione recusandae exercitationem doloribus quae
+            labore quos sunt. Assumenda?
+          </p>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </form>
+
+    <div class="container"></div>
+  </body>
+  <script src="app.js"></script>
+</html>

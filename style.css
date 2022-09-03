@@ -1,0 +1,199 @@
+* {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', 'Gill Sans', 'Gill Sans MT', Calibri,
+    'Trebuchet MS', cursive, sans-serif;
+}
+body {
+  /* background: linear-gradient(60deg, rgb(112, 99, 99), rgb(41, 38, 38)); */
+  background: linear-gradient(60deg, rgb(33, 189, 142), rgb(52, 122, 117));
+  /* background: linear-gradient(-60deg, rgb(94, 185, 94), rgb(36, 131, 36)); */
+  min-height: 100vh;
+  cursor: default;
+}
+
+.header,
+form,
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  margin: 40px 29% 35px 0;
+}
+.title {
+  font-size: 32px;
+}
+.question {
+  font-size: 15px;
+  margin: 5px 0 0 3px;
+}
+
+.input-area,
+.add-to-do {
+  display: flex;
+}
+.input-area {
+  margin-right: 205px;
+}
+.add-to-do {
+  margin: 0 0 30px 0;
+}
+.text {
+  padding: 6px 16px 6px 16px;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  appearance: none;
+  border: none;
+}
+.sub-btn {
+  background-color: black;
+  padding: 6px 20px 7px 20px;
+  font-size: 17px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sub-btn:hover {
+  background-color: white;
+  color: black;
+}
+.error-msg {
+  position: absolute;
+  margin-left: 20%;
+  background-color: red;
+  text-align: center;
+  width: 146px;
+  color: white;
+  padding: 5px 3px 5px 3px;
+  border-radius: 5px 5px 5px 5px;
+}
+.info-btn {
+  width: 40px;
+  padding: 2px 10px 3px 10px;
+  border-radius: 5px;
+  font-size: 17;
+  background: rgba(8, 131, 8, 0.979);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.clear-btn {
+  width: 40px;
+  padding: 2px 10px 3px 10px;
+  border-radius: 5px;
+  font-size: 17;
+  background: rgba(8, 131, 8, 0.979);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+.info-btn:hover,
+.done-btn:hover,
+.remove-btn:hover,
+.clear-btn:hover {
+  opacity: 0.7;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.list {
+  display: flex;
+  width: 35rem;
+  margin-bottom: 13px;
+  font-size: 20px;
+  justify-content: space-between;
+  background: rgb(51, 49, 49);
+  border-radius: 5px;
+  list-style: none;
+  margin-right: 39px;
+  transition: all 0.5s ease;
+}
+.todo-item {
+  padding: 0 0 0 15px;
+  margin: 3px;
+}
+.list li {
+  flex: 1;
+  color: white;
+}
+.done-btn {
+  width: 80px;
+  padding: 5px 10px 10px 5px;
+  border-radius: 0;
+  background: rgba(8, 131, 8, 0.979);
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn {
+  width: 80px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 0;
+  background-color: rgba(214, 31, 31, 0.801);
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s ease;
+}
+.hidden {
+  display: none;
+}
+.fa-question,
+.fa-trash-can,
+.fa-check-double,
+.fa-trash-arrow-up {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through white;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
+}
